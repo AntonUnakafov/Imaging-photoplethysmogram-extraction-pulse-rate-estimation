@@ -1,0 +1,2 @@
+ROI: (x, y) = (1460, 630), w = 341, h = 181
+HSV skin mask: hue (0, 15), saturation (10, 110), value (0, 240)

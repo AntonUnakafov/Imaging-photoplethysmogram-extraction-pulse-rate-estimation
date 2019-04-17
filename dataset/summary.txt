@@ -1,0 +1,12 @@
+Session	Sensor		Frame rate, fps	Session,duration, s	Reference segment duration, s
+1	Kinect RGB	30		420			8.5
+2	Kinect RGB	30		307			8.5
+	Kinect IR	30		307			8.5
+3	Chameleon	50		275			5
+4	Chameleon	100		160			5
+5	Chameleon	50		204			5
+6	Chameleon	50		93			5
+7	Chameleon	50		500			5
+8	Chameleon	50		140			5	
+9	Chameleon IR	100		133			5
+10	Chameleon IR	50		184			5
