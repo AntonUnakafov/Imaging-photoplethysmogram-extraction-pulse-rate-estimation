@@ -1,6 +1,8 @@
 # Imaging-photoplethysmogram-extraction-pulse-rate-estimation
 Tools for imaging photoplythysmogram extraction and processing
 
+![example of imaging photoplethysmogram with corresponding EEG signal](img/EEGandIPPG.png?raw=true "Examplary imaging photoplethysmogram with corresponding EEG signal")
+
 ## Intro 
 Imaging photoplethysmogram (iPPG) is a technique for remote non-contact pulse rate measurement. iPPG is usually acquired from facial or palm video.
 This package provides tools for iPPG signal extraction and processing. The rhesus monkeys iPPG data from [1] are used as a test dataset.
