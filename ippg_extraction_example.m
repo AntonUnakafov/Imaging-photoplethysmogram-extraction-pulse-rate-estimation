@@ -16,7 +16,7 @@ fontSize = 10;
 fontType = 'Arial';
 lineWidth = 2;
 
-%% Step 1: extracting raw color signals from the video
+%% Step 1: extracting raw color signals from the video 
 
 % please see [a] for the description of HSV and STD masking
 % here the settings from [a] are used
@@ -31,7 +31,7 @@ videoSettings = struct('manualROIselection',  true, ...
 video_path = 'C:\Documents\DEAP\Video\s01\s01_trial01.avi';
 rawColorSignal = extract_color_channels_from_video(video_path, videoSettings);
 
-%% Steps 2-4: compute and process imaging photoplethysmogramm (iPPG)
+%% Steps 2-4: compute and process imaging photoplethysmogramm (iPPG) 
 VIDEO_SR = 50.0; % video sampling rate
 if (VIDEO_SR > 50)
     FFT_WINDOW_SIZE = 2048; 
@@ -122,7 +122,7 @@ ylabel( ' imaging photoplethysmogram [a.u.] ', 'fontsize', fontSize, 'FontName',
 title('iPPG extracted using POS method', 'fontsize', fontSize, 'FontName',fontType)
 axis tight
 
-%% Steps 5: pulse rate estimation
+%% Steps 5: pulse rate estimation 
 % pulse rate estimation using Discrete Fourier Transform:
 [hrEstimatedFFT, spectrum] = DFT_pulse_rate_estimate(iPPG, ippgSettings);
 % pulse rate estimation using wavelet transform:

@@ -11,7 +11,6 @@
 %       - cascadeROIselection - boolean, whether face detection by the 
 %         Viola-Jones algorithm [1] is used. 
 %         This requires Computer Vision toolbox!
-%         Currently only as beta-version!!!
 %       - manualROIselection - boolean, whether ROI is selected manually
 %         for the first frame. Can be used in combination with previous
 %         setting, then face is searched only in the specified ROI.
@@ -67,7 +66,6 @@ else
 end
 
 if (videoSettings.cascadeROIselection) % initialize face detector
-    faceDetector = vision.CascadeObjectDetector;
     faceExpectedRect = [1, 1, widthROI, heightROI];
 end    
 
