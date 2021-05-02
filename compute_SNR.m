@@ -21,30 +21,6 @@
 % Robust pulse rate from chrominance-based rPPG. 
 % IEEE Transactions on Biomedical Engineering. 60(10):2878-86.
 %
-% EXAMPLE OF USE:
-%{ 
-  % compute trueHR
-  % extract channelsIntensity from video
-  % define ippgSettings
-  settings = ippgSettings;
-  for i = 1:ippgSettings.nMethod
-    settings.extractionMethod = ippgSettings.extractionMethod(i); 
-    settings.processing = ippgSettings.processing(i);
-    iPPG = compute_ippg(channelsIntensity, settings);
-    [~, spectrum{i}] = DFT_pulse_rate_estimate(iPPG, settings);
-  end
-
-  [~, spectrum{i}] = DFT_pulse_rate_estimate(iPPG, ippgSettings);
-  [~, spectrum, freq] = computeHRestimate(ppg, ippgSettings)
-
-  %exclude all frequencies outside of heart rate range
-  [~, minIndex] = min(abs(freq - ippgSettings.minFreq));
-  [~, maxIndex] = min(abs(freq - ippgSettings.maxFreq));
-  freq = freq(minIndex:maxIndex);
-  spectrum = spectrum(minIndex:maxIndex, :);
-  nBins = 4;
-  snr = compute_SNR(spectrum, freq, trueHR, nBins)
- %}
 
 function snr = compute_SNR(spectrum, freq, trueHR, nBins)  
   nHRvalue = length(trueHR);
